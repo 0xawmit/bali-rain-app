@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation'
 import Card from '../../components/Card'
 import Button from '../../components/Button'
 import Input from '../../components/Input'
+import UserInfo from '../../components/UserInfo'
 import { useToast } from '../../components/ToastContainer'
 
 interface QRScanResponse {
@@ -86,13 +87,14 @@ export default function ScanPage() {
   }
 
   return (
-    <div className="max-w-4xl mx-auto p-6 sm:p-8 space-y-10">
+    <div className="w-full py-8 space-y-8">
+      <UserInfo />
       <Card padding="lg">
         <div className="space-y-10">
           <div className="text-center">
-            <div className="text-9xl mb-8">📱</div>
-            <h2 className="text-5xl font-light text-black mb-6">Scan QR Code</h2>
-            <p className="text-2xl text-gray-600">Enter the code from your Bali Rain bottle</p>
+            <div className="text-7xl mb-6">📱</div>
+            <h2 className="text-4xl font-light text-black mb-4">Scan QR Code</h2>
+            <p className="text-xl text-gray-600">Enter the code from your Bali Rain bottle</p>
           </div>
 
           <form onSubmit={handleQRScan} className="space-y-8">
@@ -129,9 +131,9 @@ export default function ScanPage() {
       </Card>
 
       <Card className="bg-gray-50">
-        <div className="space-y-6">
-          <h3 className="text-2xl font-light text-black mb-6">📖 How it works</h3>
-          <div className="space-y-4 text-lg text-gray-700">
+        <div className="space-y-5">
+          <h3 className="text-xl font-light text-black mb-5">📖 How it works</h3>
+          <div className="space-y-3 text-base text-gray-700">
             <p>• Find a QR code on your Bali Rain bottle or poster</p>
             <p>• Enter the code above (case doesn&apos;t matter)</p>
             <p>• Earn 25 points for each valid scan</p>

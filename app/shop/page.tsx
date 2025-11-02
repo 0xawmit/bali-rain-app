@@ -1,20 +1,22 @@
 'use client'
 
 import Card from '../../components/Card'
+import UserInfo from '../../components/UserInfo'
 
 export default function ShopPage() {
   return (
-    <div className="max-w-4xl mx-auto p-6 sm:p-8 space-y-10">
+    <div className="w-full py-8 space-y-8">
+      <UserInfo />
       <Card className="text-center" padding="lg">
-        <div className="text-9xl mb-8">🛍️</div>
-        <h1 className="text-5xl font-light text-black mb-4">Shop</h1>
-        <p className="text-2xl text-gray-600 mb-10">Redeem your points for rewards</p>
+        <div className="text-7xl mb-6">🛍️</div>
+        <h1 className="text-4xl font-light text-black mb-3">Shop</h1>
+        <p className="text-xl text-gray-600 mb-8">Redeem your points for rewards</p>
       </Card>
 
-      <div className="text-center py-20">
-        <div className="text-8xl mb-8">🎁</div>
-        <p className="text-3xl font-light text-gray-700 mb-4">Coming Soon</p>
-        <p className="text-xl text-gray-500">We&apos;re preparing amazing rewards for you!</p>
+      <div className="text-center py-16">
+        <div className="text-7xl mb-6">🎁</div>
+        <p className="text-2xl font-light text-gray-700 mb-3">Coming Soon</p>
+        <p className="text-lg text-gray-500">We&apos;re preparing amazing rewards for you!</p>
       </div>
     </div>
   )

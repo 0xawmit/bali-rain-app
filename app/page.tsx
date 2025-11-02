@@ -5,11 +5,11 @@ export default async function Home() {
   const supabase = await createClient()
   
   // Check if user is authenticated
-  const { data: { session } } = await supabase.auth.getSession()
+  const { data: { user } } = await supabase.auth.getUser()
   
-  if (session) {
-    // User is logged in, redirect to home
-    redirect('/home')
+  if (user) {
+    // User is logged in, redirect to wallet (main dashboard)
+    redirect('/wallet')
   } else {
     // User is not logged in, redirect to login
     redirect('/login')

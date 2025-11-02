@@ -6,6 +6,7 @@ import { useRouter } from 'next/navigation'
 import Card from '../../components/Card'
 import Button from '../../components/Button'
 import Input from '../../components/Input'
+import UserInfo from '../../components/UserInfo'
 import { SocialSubmission } from '../../lib/types'
 import { useToast } from '../../components/ToastContainer'
 
@@ -128,18 +129,19 @@ export default function QuestsPage() {
   }
 
   return (
-    <div className="max-w-4xl mx-auto p-6 sm:p-8 space-y-10">
+    <div className="w-full py-8 space-y-8">
+      <UserInfo />
       <Card padding="lg">
         <div className="space-y-10">
           <div className="text-center">
-            <div className="text-9xl mb-8">📸</div>
-            <h2 className="text-5xl font-light text-black mb-6">Submit Social Post</h2>
-            <p className="text-2xl text-gray-600">Share your Bali Rain experience</p>
+            <div className="text-7xl mb-6">📸</div>
+            <h2 className="text-4xl font-light text-black mb-4">Submit Social Post</h2>
+            <p className="text-xl text-gray-600">Share your Bali Rain experience</p>
           </div>
 
           <form onSubmit={handleSocialSubmit} className="space-y-8">
             <div>
-              <label className="block text-xl font-medium text-black mb-4">Platform</label>
+              <label className="block text-lg font-medium text-black mb-3">Platform</label>
               <select
                 value={platform}
                 onChange={(e) => setPlatform(e.target.value as 'x' | 'instagram')}
@@ -162,7 +164,7 @@ export default function QuestsPage() {
             />
 
             <div>
-              <label className="block text-xl font-medium text-black mb-4">Screenshot (Optional)</label>
+              <label className="block text-lg font-medium text-black mb-3">Screenshot (Optional)</label>
               <input
                 type="file"
                 accept="image/*"
@@ -186,7 +188,7 @@ export default function QuestsPage() {
 
       {submissions.length > 0 && (
         <Card>
-          <h2 className="text-3xl font-light mb-10 text-black tracking-tight">My Submissions</h2>
+          <h2 className="text-2xl font-light mb-8 text-black tracking-tight">My Submissions</h2>
           
           <div className="space-y-4">
             {submissions.map((submission) => (

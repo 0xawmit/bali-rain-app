@@ -91,8 +91,8 @@ function LoginForm() {
   }
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-8 bg-white">
-      <div className="w-full max-w-md space-y-16">
+    <main className="flex min-h-screen flex-col items-center justify-center p-4 bg-white">
+      <div className="w-full space-y-16">
         {/* Header */}
         <div className="text-center space-y-6">
           <div className="text-8xl mb-4">🌧️</div>

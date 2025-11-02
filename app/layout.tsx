@@ -17,8 +17,10 @@ export default function RootLayout({
     <html lang="en">
       <body className="min-h-screen bg-white">
         <ToastProvider>
-          <main className="pb-24">{children}</main>
-          <BottomNav />
+          <div className="max-w-md mx-auto min-h-screen bg-white">
+            <main className="pb-24 px-4">{children}</main>
+            <BottomNav />
+          </div>
         </ToastProvider>
       </body>
     </html>
