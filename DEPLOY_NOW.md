@@ -26,7 +26,7 @@ git commit -m "initial commit - bali rain mvp"
 
 ```bash
 git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/bali-rain-app.git
+git remote add origin https://github.com/0xawmit/bali-rain-app.git
 git push -u origin main
 ```
 

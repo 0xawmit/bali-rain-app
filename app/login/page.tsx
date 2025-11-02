@@ -1,13 +1,13 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { createClient } from '../../lib/supabase/client'
 import { useRouter, useSearchParams } from 'next/navigation'
 import Card from '../../components/Card'
 import Button from '../../components/Button'
 import Input from '../../components/Input'
 
-export default function LoginPage() {
+function LoginForm() {
   const [email, setEmail] = useState('')
   const [loading, setLoading] = useState(false)
   const [message, setMessage] = useState('')
@@ -180,6 +180,22 @@ export default function LoginPage() {
         </div>
       </div>
     </main>
+  )
+}
+
+export default function LoginPage() {
+  return (
+    <Suspense fallback={
+      <main className="flex min-h-screen flex-col items-center justify-center p-8 bg-white">
+        <div className="text-center">
+          <div className="text-8xl mb-4">🌧️</div>
+          <h1 className="text-7xl font-light tracking-tight text-black">Bali Rain</h1>
+          <p className="text-xl text-gray-600 mt-4">Loading...</p>
+        </div>
+      </main>
+    }>
+      <LoginForm />
+    </Suspense>
   )
 }
 
